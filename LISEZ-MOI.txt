@@ -21,7 +21,7 @@ l'hébergeur. Le fichier index.html doit se trouver tout en haut.
 CE QUI RESTE BRANCHÉ SUR DES SERVICES EXTÉRIEURS (et continue de marcher)
 - Le bouton "Obtenir un devis" ouvre votre formulaire Google Forms.
 - Les vidéos du Portfolio sont hébergées sur YouTube.
-- Le lien Facebook et l'adresse e-mail contact@soluprint3d77.fr.
+- Le lien Facebook et l'adresse e-mail soluprint3d77@gmail.com.
 - Le traducteur du site (Google Traduction).
 
 À SAVOIR
