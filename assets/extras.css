@@ -1,0 +1,140 @@
+/* Sections ajoutées au site SoluPrint3D77 — reprennent la palette du site */
+.spx {
+  --spx-mint: #e4f0ed;
+  --spx-ink: #090a0a;
+  --spx-teal: #157372;
+  --spx-cyan: #22a6a4;
+  --spx-navy: #2c344c;
+  --spx-slate: #405f83;
+  --spx-blue: #0d7ae3;
+  font-family: "Open Sans", OpenSans, system-ui, sans-serif;
+  color: var(--spx-ink);
+  padding: 64px 20px;
+}
+.spx *, .spx *::before, .spx *::after { box-sizing: border-box; }
+.spx-wrap { max-width: 1080px; margin: 0 auto; }
+.spx h2 {
+  font-family: Montserrat, system-ui, sans-serif; font-weight: 600;
+  font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; color: var(--spx-teal);
+  text-align: center; margin: 0 0 12px;
+}
+.spx-lede { text-align: center; color: var(--spx-slate); font-size: 17px; line-height: 1.55; max-width: 38em; margin: 0 auto 40px; }
+.spx a { color: var(--spx-teal); }
+.spx-mint { background: var(--spx-mint); }
+.spx-white { background: #fff; }
+.spx-navy { background: var(--spx-navy); color: #fff; }
+.spx-navy h2 { color: #fff; }
+.spx-navy .spx-lede { color: rgba(255,255,255,.78); }
+
+.spx-btn {
+  display: inline-block; font-family: Montserrat, system-ui, sans-serif; font-weight: 600; font-size: 16px;
+  background: var(--spx-blue); color: #fff !important; text-decoration: none;
+  padding: 14px 28px; border-radius: 8px; transition: background .15s;
+}
+.spx-btn:hover { background: #0b6ac6; }
+.spx-btn:focus-visible, .spx-link:focus-visible, .spx-path:focus-visible { outline: 3px solid var(--spx-cyan); outline-offset: 3px; }
+.spx-center { text-align: center; margin-top: 36px; }
+.spx-link { font-weight: 600; text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: 1px; }
+
+/* Deux profils de clients */
+.spx-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.spx-path {
+  display: flex; flex-direction: column; text-decoration: none; color: inherit !important;
+  background: #fff; border-radius: 14px; padding: 30px 30px 26px;
+  border-top: 5px solid var(--spx-cyan);
+  box-shadow: 0 10px 30px rgba(44, 52, 76, .08);
+  transition: transform .2s, box-shadow .2s;
+}
+.spx-path:nth-child(2) { border-top-color: var(--spx-navy); }
+.spx-path:hover { transform: translateY(-3px); box-shadow: 0 16px 36px rgba(44, 52, 76, .14); }
+.spx-path h3 { font-family: Montserrat, system-ui, sans-serif; font-size: 22px; margin: 0 0 4px; color: var(--spx-navy); }
+.spx-path p { margin: 0 0 16px; color: var(--spx-slate); }
+.spx-path ul { list-style: none; margin: 0 0 22px; padding: 0; flex: 1; }
+.spx-path li { position: relative; padding-left: 26px; margin: 0 0 10px; line-height: 1.5; }
+.spx-path li::before { content: ""; position: absolute; left: 0; top: .55em; width: 14px; height: 3px; border-radius: 2px; background: var(--spx-cyan); box-shadow: 0 -5px 0 var(--spx-cyan), 0 5px 0 rgba(34,166,164,.45); }
+.spx-path .spx-link { align-self: flex-start; color: var(--spx-teal); }
+
+/* Réalisations */
+.spx-works { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.spx-work { margin: 0; text-decoration: none; color: inherit !important; display: block; }
+.spx-work .spx-img { aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; background: #fff; }
+.spx-work img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s; }
+.spx-work:hover img { transform: scale(1.04); }
+.spx-work figcaption { padding: 10px 2px 0; font-size: 14.5px; line-height: 1.4; }
+.spx-work b { display: block; font-family: Montserrat, system-ui, sans-serif; color: var(--spx-navy); font-size: 15.5px; }
+.spx-work span { color: var(--spx-slate); }
+
+/* Étapes */
+.spx-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: step; position: relative; }
+.spx-steps li { counter-increment: step; position: relative; padding: 0 18px; text-align: center; }
+.spx-steps li::before {
+  content: counter(step); display: flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; margin: 0 auto 16px; border-radius: 50%;
+  font-family: Montserrat, system-ui, sans-serif; font-weight: 700; font-size: 20px;
+  background: var(--spx-cyan); color: #fff; position: relative; z-index: 1;
+  box-shadow: 0 0 0 6px var(--spx-navy);
+}
+.spx-steps li:not(:last-child)::after {
+  content: ""; position: absolute; top: 25px; left: calc(50% + 26px); right: calc(-50% + 26px); height: 2px;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.5) 0 6px, transparent 6px 12px);
+}
+.spx-steps h3 { font-family: Montserrat, system-ui, sans-serif; font-size: 17px; margin: 0 0 6px; color: #fff; }
+.spx-steps p { margin: 0; font-size: 14.5px; line-height: 1.5; color: rgba(255,255,255,.78); }
+
+/* Avis */
+.spx-rating { display: flex; justify-content: center; align-items: center; gap: 10px; margin: -20px 0 32px; font-size: 15px; color: var(--spx-slate); }
+.spx-stars { color: #f5a623; font-size: 20px; letter-spacing: 2px; }
+.spx-reviews { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.spx-review { margin: 0; background: #fff; border-radius: 14px; padding: 24px 26px; box-shadow: 0 10px 30px rgba(44, 52, 76, .07); display: flex; flex-direction: column; }
+.spx-review blockquote { margin: 0 0 14px; font-size: 15.5px; line-height: 1.6; flex: 1; }
+.spx-review figcaption { font-size: 14px; color: var(--spx-slate); }
+.spx-review figcaption b { color: var(--spx-navy); font-family: Montserrat, system-ui, sans-serif; }
+.spx-review .spx-stars { font-size: 15px; display: block; margin-bottom: 8px; }
+
+/* Page À propos */
+.spx-about { max-width: 760px; margin: 0 auto; }
+.spx-about h3 { font-family: Montserrat, system-ui, sans-serif; color: var(--spx-navy); font-size: 20px; margin: 32px 0 10px; }
+.spx-about p, .spx-about li { font-size: 16.5px; line-height: 1.65; }
+.spx-about ul { padding-left: 20px; }
+.spx-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0 8px; }
+.spx-fact { background: #fff; border-radius: 12px; padding: 18px; text-align: center; box-shadow: 0 8px 24px rgba(44,52,76,.07); }
+.spx-fact b { display: block; font-family: Montserrat, system-ui, sans-serif; font-size: 22px; color: var(--spx-teal); }
+.spx-fact span { font-size: 14px; color: var(--spx-slate); }
+
+/* Vidéos : aperçu cliquable, YouTube ne se charge qu'au clic */
+.spx-video {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 12px; cursor: pointer; overflow: hidden;
+  background: radial-gradient(circle at 30% 30%, #2f4a6b, var(--spx-navy, #2c344c) 70%);
+  color: #fff; font: 600 16px/1.3 Montserrat, system-ui, sans-serif; padding: 16px; text-align: center;
+}
+.spx-video::before {
+  content: ""; position: absolute; inset: 0; opacity: .18;
+  background: repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 6px);
+}
+.spx-video i {
+  position: relative; width: 68px; height: 68px; border-radius: 50%; background: #22a6a4;
+  display: flex; align-items: center; justify-content: center; transition: transform .2s;
+}
+.spx-video i::after { content: ""; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; margin-left: 5px; }
+.spx-video:hover i { transform: scale(1.08); }
+.spx-video small { position: relative; font: 400 12.5px/1.4 "Open Sans", system-ui, sans-serif; opacity: .8; }
+.spx-video span { position: relative; }
+.spx-video:focus-visible { outline: 3px solid #22a6a4; outline-offset: 3px; }
+.spx-video-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 12px; display: block; }
+
+@media (max-width: 900px) {
+  .spx-works { grid-template-columns: repeat(2, 1fr); }
+  .spx-steps { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+  .spx-steps li::after { display: none; }
+}
+@media (max-width: 640px) {
+  .spx { padding: 48px 16px; }
+  .spx-paths, .spx-reviews, .spx-facts { grid-template-columns: 1fr; }
+  .spx-steps { grid-template-columns: 1fr; }
+  .spx-path { padding: 24px 22px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spx-path, .spx-work img, .spx-video i { transition: none; }
+  .spx-path:hover { transform: none; }
+}
