@@ -9,6 +9,7 @@
   var next = root.querySelector('[data-sp-next]');
   var done = root.querySelector('.sp-done');
   var current = 0;
+  var loadedAt = Date.now();
 
   function show(i) {
     current = i;
@@ -103,7 +104,18 @@
   // Entrée dans un champ texte = passer à la suite (sauf dans les zones de texte)
   form.addEventListener('submit', function (e) { e.preventDefault(); next.click(); });
 
+  function showDone() {
+    form.style.display = 'none';
+    done.classList.add('is-active');
+    layers.forEach(function (l) { l.classList.add('is-done'); l.classList.remove('is-current'); });
+    scrollToTop();
+  }
+
   function submit() {
+    // Piège anti-robots : champ invisible rempli, ou formulaire envoyé en quelques secondes
+    var trap = root.querySelector('#sp-website');
+    if ((trap && trap.value) || Date.now() - loadedAt < 4000) { showDone(); return; }
+    if (trap) trap.disabled = true;
     // Une option « Autre » cochée sans précision serait refusée par Google : on la retire
     root.querySelectorAll('input[value="__other_option__"]:checked').forEach(function (r) {
       var t = r.closest('[data-sp-other]').querySelector('.sp-other input');

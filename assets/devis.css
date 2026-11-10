@@ -177,3 +177,6 @@
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .sp-devis { --sp-glass: rgba(9, 24, 38, 0.88); }
 }
+
+/* Piège anti-robots : invisible pour les humains */
+.sp-hp { position: absolute !important; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
