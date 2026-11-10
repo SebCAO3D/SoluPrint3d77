@@ -1,0 +1,34 @@
+COPIE DU SITE www.soluprint3d77.fr
+Réalisée le 10 novembre 2026
+
+CONTENU
+- Les 8 pages : Accueil, Services, Matériaux, Portfolio, À propos de nous,
+  FAQ, Contactez-nous, Mentions légales / CGV.
+- Toutes les images (dans toutes les tailles utilisées par le site, pour
+  ordinateur, tablette et mobile), les styles, les polices et les scripts.
+- Les liens entre les pages pointent vers les fichiers de cette copie.
+
+POUR VOIR LE SITE SUR VOTRE ORDINATEUR
+Ouvrez le fichier index.html avec votre navigateur. Tout s'affiche.
+Seule petite différence hors ligne : les textes détaillés de la fenêtre
+"Paramètres de confidentialité" ne se chargent qu'une fois le site en ligne.
+
+POUR METTRE LE SITE EN LIGNE CHEZ UN AUTRE HÉBERGEUR
+Envoyez TOUT le contenu de ce dossier (pas le dossier lui-même) à la racine
+de votre hébergement, par FTP ou via le gestionnaire de fichiers de
+l'hébergeur. Le fichier index.html doit se trouver tout en haut.
+
+CE QUI RESTE BRANCHÉ SUR DES SERVICES EXTÉRIEURS (et continue de marcher)
+- Le bouton "Obtenir un devis" ouvre votre formulaire Google Forms.
+- Les vidéos du Portfolio sont hébergées sur YouTube.
+- Le lien Facebook et l'adresse e-mail contact@soluprint3d77.fr.
+- Le traducteur du site (Google Traduction).
+
+À SAVOIR
+- C'est une copie "figée" : pour modifier un texte, il faut éditer le
+  fichier HTML de la page concernée (pas d'éditeur visuel comme chez IONOS).
+- Les statistiques de visite IONOS (SiteAnalytics) ne fonctionneront plus
+  ailleurs que chez IONOS.
+- Quelques anciens formats de police (EOT, TTF, SVG), destinés à de très
+  vieux navigateurs, n'ont pas été inclus ; les navigateurs actuels utilisent
+  les formats WOFF/WOFF2, qui sont bien présents. Aucun effet visible.
