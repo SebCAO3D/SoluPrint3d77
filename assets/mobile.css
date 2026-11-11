@@ -45,3 +45,25 @@
   /* Sections ajoutées (accueil, à propos, FAQ) */
   .spx { padding-top: 40px; padding-bottom: 40px; }
 }
+
+/* ---------- Version ordinateur : même logique d'harmonisation ----------
+   titres de page 40 px, titres de section 33 px, sous-titres 28 px, introductions 20 px, texte 16 px */
+.spx-vide { display: none !important; }
+@media screen and (min-width: 769px) {
+  /* Titres de page à la même taille (Contact, FAQ) */
+  .heading-module-5ff3b39f-3af9-46de-902d-2cf3bf50e7b7 .desktop-font-size-48 { font-size: 40px; }
+  .spx-faq-hero h1 { font-size: 40px; }
+  /* Titres des sections ajoutées alignés sur ceux du site (33 px) */
+  .spx h2 { font-size: 33px; }
+  /* Textes d'introduction à 20 px (galerie et contact) */
+  .heading-module-32050ed7-a864-4219-8f81-bc214bbae5bf .desktop-font-size-24 { font-size: 20px; }
+  /* Message d'accord avant la carte Google */
+  .module-blocker-title { font-size: 18px !important; line-height: 1.35; }
+  /* Marges des sections : 32 à 80 px selon les pages -> 48 px partout */
+  main > .section-root .section-content > .grid-row-root { padding-top: 48px !important; padding-bottom: 48px !important; }
+  main > .section-root .section-content .grid-row-root .grid-row-root { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .spx { padding-top: 56px; padding-bottom: 56px; }
+  /* Les grandes images d'en-tête (accueil, galerie) gardent leur hauteur d'origine */
+  main > .section-root:has(.heading-module-0a71d3f8-c3e7-4317-9fbf-9968b12ae50c) .section-content > .grid-row-root { padding-top: 64px !important; padding-bottom: 64px !important; }
+  main > .section-root:has(.heading-module-32050ed7-a864-4219-8f81-bc214bbae5bf) .section-content > .grid-row-root { padding-top: 0 !important; padding-bottom: 0 !important; }
+}
