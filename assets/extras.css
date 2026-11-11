@@ -138,3 +138,47 @@
   .spx-path, .spx-work img, .spx-video i { transition: none; }
   .spx-path:hover { transform: none; }
 }
+
+/* Page FAQ */
+/* La photo reste immobile derrière la page pendant le défilement, sur PC comme sur téléphone */
+.spx-faq-page { position: relative; clip-path: inset(0); background: #2c344c; }
+.spx-faq-page::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(rgba(28,36,54,.74), rgba(28,36,54,.74)), var(--spx-faq-img) center / cover no-repeat;
+}
+.spx-faq-page > * { position: relative; z-index: 1; }
+.spx-faq-hero { position: relative; color: #fff; padding: 88px 20px 24px; background: none; }
+.spx-faq { background: none; padding-top: 24px; }
+.spx-faq-hero h1 { font-family: Montserrat, system-ui, sans-serif; font-weight: 600; font-size: clamp(30px, 4.4vw, 44px); margin: 0 0 12px; color: #fff; }
+.spx-faq-hero p { font-size: 18px; line-height: 1.55; max-width: 34em; margin: 0; color: rgba(255,255,255,.85); }
+.spx-faq .spx-wrap, .spx-faq-hero .spx-wrap { max-width: 820px; }
+.spx-faq-group { margin: 0 0 40px; }
+.spx-faq-group h2 { text-align: left; font-size: 24px; margin: 0 0 14px; color: #fff; }
+.spx-q { background: #fff; border-radius: 12px; margin: 0 0 10px; box-shadow: 0 6px 18px rgba(44,52,76,.06); border-left: 4px solid transparent; }
+.spx-q[open] { border-left-color: var(--spx-cyan); }
+.spx-q summary {
+  list-style: none; cursor: pointer; position: relative;
+  padding: 18px 56px 18px 22px; font-family: Montserrat, system-ui, sans-serif; font-weight: 600; font-size: 17px; line-height: 1.4; color: var(--spx-ink);
+}
+.spx-q summary::-webkit-details-marker { display: none; }
+.spx-q summary::after {
+  content: ""; position: absolute; right: 22px; top: 50%; width: 10px; height: 10px; margin-top: -7px;
+  border-right: 2.5px solid var(--spx-teal); border-bottom: 2.5px solid var(--spx-teal); transform: rotate(45deg); transition: transform .2s;
+}
+.spx-q[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+.spx-q summary:hover { color: var(--spx-teal); }
+.spx-q summary:focus-visible { outline: 3px solid var(--spx-cyan); outline-offset: 2px; border-radius: 12px; }
+.spx-a { padding: 0 22px 20px; }
+.spx-a p { margin: 0; font-size: 16.5px; line-height: 1.65; color: #2b3240; }
+.spx-a a { color: var(--spx-teal); font-weight: 600; }
+.spx-faq-cta { background: var(--spx-teal); color: #fff; border-radius: 14px; padding: 30px 28px; text-align: center; margin-top: 8px; }
+.spx-faq-cta h2 { color: #fff; font-size: 22px; margin: 0 0 6px; }
+.spx-faq-cta p { margin: 0 0 18px; color: rgba(255,255,255,.82); }
+@media (max-width: 640px) {
+  .spx-faq-hero { padding: 48px 16px 8px; }
+  .spx-faq-hero p { font-size: 16.5px; }
+  .spx-q summary { font-size: 16px; padding: 16px 48px 16px 18px; }
+  .spx-q summary::after { right: 18px; }
+  .spx-a { padding: 0 18px 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .spx-q summary::after { transition: none; } }
