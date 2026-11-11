@@ -1,0 +1,9 @@
+/* Lisibilité sur téléphone */
+@media screen and (max-width: 768px) {
+  /* Le thème réduisait les textes à 12 px environ : on revient à leur taille normale (16 px) */
+  .text-root { --mobile-font-downscale: 1 !important; --tablet-font-downscale: 1 !important; }
+  .text-root p, .text-root li { line-height: 1.6; }
+  /* Les blocs animés qui entrent par la droite élargissaient la page : le téléphone dézoomait tout le site */
+  .animation-fade-left { transform: none !important; }
+  html, body { overflow-x: clip; }
+}
