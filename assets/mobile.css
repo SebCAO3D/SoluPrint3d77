@@ -20,3 +20,16 @@
   .heading-module-5ff3b39f-3af9-46de-902d-2cf3bf50e7b7 h1 { line-height: 1.25; hyphens: manual; -webkit-hyphens: manual; }
   .heading-module-5ff3b39f-3af9-46de-902d-2cf3bf50e7b7 .desktop-font-size-48 { font-size: 28px; }
 }
+
+/* Harmonisation des tailles sur téléphone :
+   titres de page 28-30 px, titres de section 25 px, sous-titres 21 px, texte 16 px, légendes 14 px */
+@media screen and (max-width: 768px) {
+  /* Boutons (« Obtenir un devis », « Demandez un devis », « Accepter »…) : 12 px -> 16 px */
+  .button-button { font-size: 16px !important; }
+  /* Légendes des photos de la galerie : 12 px -> 14 px */
+  .image-gallery-title, .image-gallery-title span { font-size: 14px !important; line-height: 1.35; }
+  /* Message d'accord avant d'afficher la carte Google : 24 px -> 18 px */
+  .module-blocker-title { font-size: 18px !important; line-height: 1.35; }
+  /* Contact : « Contactez-nous » à la même taille que le titre au-dessus */
+  .heading-module-4085dc3c-dc93-426d-8867-e6378e610ddd h1 { font-size: 28px !important; }
+}
