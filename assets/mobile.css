@@ -33,3 +33,15 @@
   /* Contact : « Contactez-nous » à la même taille que le titre au-dessus */
   .heading-module-4085dc3c-dc93-426d-8867-e6378e610ddd h1 { font-size: 28px !important; }
 }
+
+/* Espacements verticaux harmonisés sur téléphone :
+   ~50 px entre un texte et son image, ~70 à 100 px entre deux sections */
+@media screen and (max-width: 768px) {
+  /* Lignes vides laissées dans le contenu (paragraphes sans texte) */
+  .spx-vide { display: none !important; }
+  /* Marges haute et basse de chaque bloc de page (32 à 80 px selon les pages) ramenées à 32 px */
+  main > .section-root .section-content > .grid-row-root { padding-top: 32px !important; padding-bottom: 32px !important; }
+  main > .section-root .section-content .grid-row-root .grid-row-root { padding-top: 0 !important; padding-bottom: 0 !important; }
+  /* Sections ajoutées (accueil, à propos, FAQ) */
+  .spx { padding-top: 40px; padding-bottom: 40px; }
+}
