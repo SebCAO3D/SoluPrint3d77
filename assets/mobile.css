@@ -7,3 +7,10 @@
   .animation-fade-left { transform: none !important; }
   html, body { overflow-x: clip; }
 }
+
+/* Accueil : titre et sous-titre de la grande image, réduits sur téléphone */
+@media screen and (max-width: 768px) {
+  .heading-module-0a71d3f8-c3e7-4317-9fbf-9968b12ae50c h1 { line-height: 1.15; hyphens: manual; -webkit-hyphens: manual; }
+  .heading-module-0a71d3f8-c3e7-4317-9fbf-9968b12ae50c .desktop-font-size-72 { font-size: 38px; }
+  .heading-module-0a71d3f8-c3e7-4317-9fbf-9968b12ae50c .desktop-font-size-28 { font-size: 19px; line-height: 1.4; display: inline-block; margin-top: 10px; }
+}
