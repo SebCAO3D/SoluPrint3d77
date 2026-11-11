@@ -65,5 +65,6 @@
   .spx { padding-top: 56px; padding-bottom: 56px; }
   /* Les grandes images d'en-tête (accueil, galerie) gardent leur hauteur d'origine */
   main > .section-root:has(.heading-module-0a71d3f8-c3e7-4317-9fbf-9968b12ae50c) .section-content > .grid-row-root { padding-top: 64px !important; padding-bottom: 64px !important; }
+  main > .section-root:has(.heading-module-0a71d3f8-c3e7-4317-9fbf-9968b12ae50c) .spx-vide { display: block !important; }
   main > .section-root:has(.heading-module-32050ed7-a864-4219-8f81-bc214bbae5bf) .section-content > .grid-row-root { padding-top: 0 !important; padding-bottom: 0 !important; }
 }
