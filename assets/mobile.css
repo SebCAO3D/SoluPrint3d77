@@ -14,3 +14,9 @@
   .heading-module-0a71d3f8-c3e7-4317-9fbf-9968b12ae50c .desktop-font-size-72 { font-size: 38px; }
   .heading-module-0a71d3f8-c3e7-4317-9fbf-9968b12ae50c .desktop-font-size-28 { font-size: 19px; line-height: 1.4; display: inline-block; margin-top: 10px; }
 }
+
+/* Contact : titre « Votre partenaire de proximité en Seine-et-Marne », réduit sur téléphone */
+@media screen and (max-width: 768px) {
+  .heading-module-5ff3b39f-3af9-46de-902d-2cf3bf50e7b7 h1 { line-height: 1.25; hyphens: manual; -webkit-hyphens: manual; }
+  .heading-module-5ff3b39f-3af9-46de-902d-2cf3bf50e7b7 .desktop-font-size-48 { font-size: 28px; }
+}
