@@ -83,7 +83,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 }
 </style>
 <!-- Metricool : mesure d'audience sans cookie -->
-<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"40975680ac68e18b8c824d8a022aa11c"})});</script>
+<script>
+/* Mesure d'audience Metricool, sans cookie.
+   Tes propres visites ne sont pas comptées : ouvre une fois https://www.soluprint3d77.fr/?moi sur chaque appareil
+   (?compter pour réactiver le comptage sur cet appareil). */
+(function(){
+  var k="sp-ne-pas-compter", q=location.search;
+  try{ if(/[?&]moi\b/.test(q)) localStorage.setItem(k,"1"); if(/[?&]compter\b/.test(q)) localStorage.removeItem(k); if(localStorage.getItem(k)) return; }catch(e){}
+  function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}
+  loadScript(function(){beTracker.t({hash:"40975680ac68e18b8c824d8a022aa11c"})});
+})();
+</script>
 </head>
 <body class="wp-singular page-template-default page page-id-843 wp-theme-gox no-sidebar">
 	<!-- #root -->
